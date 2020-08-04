@@ -1,0 +1,56 @@
+{
+  "name": "hubspot-scripts",
+  "description": "Utility Scripts for developing on HubSpot CMS",
+  "version": "0.0.0",
+  "author": "George Kemp",
+  "bin": {
+    "hubspot-scripts": "./bin/run"
+  },
+  "bugs": "https://github.com/themes/hubspot-scripts/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "browser-sync": "^2.26.12",
+    "chokidar": "^3.4.1",
+    "fs-extra": "^9.0.1",
+    "sass": "^1.26.10",
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "globby": "^10"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/themes/hubspot-scripts",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "hubspot-scripts",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "themes/hubspot-scripts",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
